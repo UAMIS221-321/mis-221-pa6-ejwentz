@@ -1,0 +1,40 @@
+.jumbotron
+{
+    background-color: maroon;
+    color: white;
+}
+
+.inputHeader
+{
+    text-align: left;
+    padding-left: 100px;
+}
+
+.btnRow
+{
+    padding-left: 100px;
+}
+
+.btnBottom
+{
+    margin-top: 20px;
+}
+
+label
+{
+    display: inline-block;
+    clear: left;
+    width: 100px;
+    text-align: right;
+}
+
+input
+{
+    display: inline-block;
+}
+
+.coverArt
+{
+    max-width: 250px;
+    height: auto;
+}

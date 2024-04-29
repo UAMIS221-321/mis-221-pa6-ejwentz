@@ -1,0 +1,121 @@
+[2:15 PM] Edward Wentz
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./resources/styles/index.css">
+
+    <title>Book Rental</title>
+
+</head>
+
+<body onload="handleOnLoad()">
+
+    <script src="./resources/scripts/api.js"></script>
+
+    <script src="./resources/scripts/index.js"></script>
+
+    <div class="jumbotron">
+
+        <h1>Book Rental System</h1>
+
+
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <h3>Avaliable Books</h3>
+
+                <div id="listBox"></div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h3 class="inputHeader">Book Information</h3>
+
+                <form onsubmit="return false;" method="post">
+
+                    <label for="bookTitle">Title:</label>
+
+                    <input type="text" id="bookTitle" name="title" readonly><br><br>
+
+                    <label for="bookAuthor">Author:</label>
+
+                    <input type="text" id="bookAuthor" name="author" readonly><br><br>
+
+                    <label for="bookGenre">Genre:</label>
+
+                    <input type="text" id="bookGenre" name="genre" readonly><br><br>
+
+                    <label for="bookAvlb">Number Avaliable:</label>
+
+                    <input type="text" id="bookAvlb" name="avlb" readonly><br><br>
+
+                    <label for="bookIsbn">ISBN:</label>
+
+                    <input type="text" id="bookIsbn" name="isbn" readonly><br><br>
+
+                    <label for="bookLength">Length:</label>
+
+                    <input type="text" id="bookLength" name="length" readonly><br><br>
+
+                    <label for="bookCover">Cover URL:</label>
+
+                    <input type="text" id="bookCover" name="cover" readonly><br><br>
+
+                </form>
+
+                <div class=""btnRow">
+
+                    <button id="newButton" class="btn btn-primary" onclick="handleNewClick()">New</button>
+
+                    <button id="editButton" class="btn btn-primary" onclick="handleEditClick()">Edit</button>
+
+                    <button id="deleteButton" class="btn btn-danger" onclick="handleDeleteClick()">Delete</button>
+
+                    <br>
+
+                    <button id="rentButton" class="btn btn-secondary btn-lg btnBottom" onclick="handleRentClick()">Rent</button>
+
+                    <button id="returnButton" class="btn btn-secondary btn-lg btnBottom" onclick="handleReturnClick()">Return</button>
+
+                    <span id="saveButton"></span>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h3>Cover Art</h3>
+
+                <div id="picBox"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
