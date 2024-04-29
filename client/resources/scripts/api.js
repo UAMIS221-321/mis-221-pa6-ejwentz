@@ -3,7 +3,7 @@ const cwid = "12244148";
 const baseUrl = "https://pa6-backend.herokuapp.com/api/books/"+cwid;
 var bookList = [];
 var myBook = {};
-
+//Populate the list of books
 function populateList(){
 
     const allBooksApiUrl = baseUrl;
@@ -21,7 +21,7 @@ function populateList(){
         console.log(error);
     });
 }
-
+//add book to the list
 function putBook(id){
     const putBookApiUrl = baseUrl + "/"+id;
     const sendBook = {
@@ -48,7 +48,7 @@ function putBook(id){
         populateForm();
     });
 }
-
+//Post book to the list
 function postBook(){
     const postBookApiUrl = baseUrl;
     const sendBook = {
@@ -74,7 +74,7 @@ function postBook(){
         blankFields();
     });
 }
-
+//Deletes the book from the list
 function deleteBook(){
     const deleteBookApiUrl = baseUrl + "/" + myBook.id;
     fetch(deleteBookApiUrl, {

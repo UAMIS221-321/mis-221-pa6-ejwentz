@@ -15,7 +15,7 @@ function handleOnChange()
     });
     populateForm();
 }
-
+//Allowes user to edit the book
 function handleEditClick()
 {
     makeEditable();
@@ -25,39 +25,40 @@ function handleEditClick()
     document.getElementById("saveButton").innerHTML = buttonHtml;
     document.getElementById("saveButton").style.display = "inline-block";
 }
-
+//Allows user to rent book
 function handleRentClick()
 {
     myBook.numAvlb--;
     document.getElementById("bookAvlb").value = myBook.numAvlb;
     putBook(myBook.id);
 }
-
+//Allows the user to return the book
 function handleReturnClick()
 {
     myBook.numAvlb++;
     document.getElementById("bookAvlb").value = myBook.numAvlb;
     putBook(myBook.id);
 }
-
+//Allow user to delete
 function handleDeleteClick()
 {
     deleteBook();
 }
-
+//Allows the user to save the book
 function handleCancelSave()
 {
     populateForm();
     makeReadOnly();
     showButtons();
 }
+//Saves the deit book the user made
 function handleEditSave(id)
 {
     putBook(id);
     makeReadOnly();
     showButtons();
 }
-
+//Allows for the new save
 function handleNewSave()
 {
     postBook();
